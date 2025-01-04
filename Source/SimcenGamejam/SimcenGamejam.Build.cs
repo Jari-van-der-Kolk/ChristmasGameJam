@@ -6,9 +6,19 @@ public class SimcenGamejam : ModuleRules
 {
 	public SimcenGamejam(ReadOnlyTargetRules Target) : base(Target)
 	{
-		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+		PCHUsage = PCHUsageMode.NoSharedPCHs;
+		PrivatePCHHeaderFile = "SimcenGamejam.h";
+		CppStandard = CppStandardVersion.Cpp17;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[]
+		{
+			"Core", 
+			"CoreUObject",
+			"Engine",
+			"InputCore",
+			"EnTT",
+			
+		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
